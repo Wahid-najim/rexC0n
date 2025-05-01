@@ -1,3 +1,4 @@
+
 # RexC0n
 
 ### Advanced Subdomain Enumeration Framework for Red Teams, Recon Operators & Bug Bounty Hunters
@@ -53,19 +54,27 @@ cd rexC0n
 
 # Make the script executable
 chmod +x subdomain_enum.sh
+```
 
-🧪 Usage
+---
 
+## 🧪 Usage
+
+```bash
 # Basic interactive execution
 ./subdomain_enum.sh
 
 # Help menu
 ./subdomain_enum.sh -h
+```
 
-📂 Output Structure
+---
+
+## 📂 Output Structure
 
 All findings are saved under a timestamped directory with this structure:
 
+```
 rexC0n/
 ├── subdomains/
 │   ├── all_subdomains.txt
@@ -74,11 +83,15 @@ rexC0n/
 │   └── ...
 ├── live_subdomains/
 │   └── live_subdomains.txt
+```
 
-    Results are cleanly organized for quick reporting and tool chaining.
+> Results are cleanly organized for quick reporting and tool chaining.
 
-🧵 Sample Recon Flow
+---
 
+## 🧵 Sample Recon Flow
+
+```
 Target: example.com
 
 > Running Subfinder, Assetfinder, Findomain, Amass...
@@ -86,27 +99,28 @@ Target: example.com
 > Deduplicated: 2,315 unique subdomains
 > Probing with httpx...
 > Live assets identified: 248
+```
 
 From here, the output can be passed directly into:
+- `nuclei` for vulnerability templates
+- `dirsearch` or `ffuf` for directory fuzzing
+- `waybackurls` for archived endpoint discovery
 
-    nuclei for vulnerability templates
+---
 
-    dirsearch or ffuf for directory fuzzing
+## 💡 Tips for Elite Recon
 
-    waybackurls for archived endpoint discovery
+- Integrate **dnsx**, **massdns**, or **Chaos** for deeper discovery
+- Use with `tmux` for parallel recon
+- Automate post-processing with custom scripts
 
-💡 Tips for Elite Recon
+---
 
-    Integrate dnsx, massdns, or Chaos for deeper discovery
-
-    Use with tmux for parallel recon
-
-    Automate post-processing with custom scripts
-
-🤝 Contributions
+## 🤝 Contributions
 
 Pull requests are welcome. To contribute:
 
+```bash
 # Fork and clone your copy
 git clone https://github.com/YOUR-USERNAME/rexC0n.git
 
@@ -116,17 +130,32 @@ git checkout -b feature/tool-enhancement
 # Commit and push
 git commit -m "Add: integrated dnsx support"
 git push origin feature/tool-enhancement
+```
 
 Then open a Pull Request on GitHub.
-🐞 Issues
 
-Have suggestions, bugs, or tool requests? Open an issue:
-➡ RexC0n Issues
-📜 License
+---
 
-RexC0n is released under the MIT License.
+## 🐞 Issues
+
+Have suggestions, bugs, or tool requests? Open an issue:  
+➡ [RexC0n Issues](https://github.com/Wahid-najim/rexC0n/issues)
+
+---
+
+## 📜 License
+
+RexC0n is released under the [MIT License](LICENSE).  
 You are free to modify, distribute, and use it with proper credit.
-👤 Author
 
-Wahid Najim
-Cybersecurity Researcher | Offensive Security Developer
+---
+
+## 👤 Author
+
+**Wahid Najim**  
+Cybersecurity Researcher | Offensive Security Developer  
+[GitHub](https://github.com/Wahid-najim)
+
+---
+
+> “First recon wins the fight. RexC0n makes sure you're first.”
