@@ -1,59 +1,97 @@
 # RexC0n
-## Advanced Subdomain Enumeration Script
-A Bash script for comprehensive subdomain enumeration using Subfinder, Assetfinder, Findomain, Amass, and httpx. It provides structured output, live subdomain detection, error handling, and directory management.
+Advanced Subdomain Enumeration Tool
 
-## Features
-- Integrates multiple subdomain enumeration tools
-- Combines and deduplicates results
-- Checks for live subdomains using httpx
-- Organizes output in a user-specified directory
-- Includes error handling and usage prompts
+RexC0n is a robust Bash script designed for comprehensive subdomain enumeration. It leverages powerful tools such as Subfinder, Assetfinder, Findomain, Amass, and httpx to deliver accurate and structured results. With automated directory management, live subdomain verification, and built-in error handling, this script streamlines reconnaissance workflows for security professionals and bug bounty hunters.
+## 🚀 Features
 
-## Requirements
-- Subfinder
-- Assetfinder
-- Findomain
-- Amass
-- httpx
+    Seamless integration of leading subdomain enumeration tools
 
-## Installation
-1. Clone the repository:
+    Consolidation and deduplication of results
+
+    Live subdomain detection using httpx
+
+    Organized output structure with user-defined directories
+
+    User-friendly prompts and error-handling mechanisms
+
+## 🛠 Requirements
+
+Ensure the following tools are installed and accessible in your system's PATH:
+
+    subfinder
+
+    assetfinder
+
+    findomain
+
+    amass
+
+    httpx
+
+## 📦 Installation
+
+# Clone the repository
 git clone https://github.com/Wahid-najim/rexC0n.git
-2. Navigate to the repository:
+
+# Navigate into the project directory
 cd rexC0n
-3. Ensure the required tools are installed:
+
+# Verify the required tools are installed
 subfinder -h
 assetfinder -h
 findomain -h
 amass -h
 httpx -h
-4. Make the script executable:
-chmod +x subdomain_enum.sh
 
-## Usage
-Run the script and follow the prompts to specify the output directory and target domains:
+# Make the script executable
+ chmod +x subdomain_enum.sh
+
+⚙️ Usage
+
+To start the enumeration process:
+
 ./subdomain_enum.sh
-For help:
+
+To display help options:
+
 ./subdomain_enum.sh -h
 
-## Output
-- All subdomains: subdomains/all_subdomains.txt
-- Live subdomains: live_subdomains/live_subdomains.txt
-- Detailed tool outputs are stored in the subdomains/ directory.
+The script will prompt for:
 
-## Contributing
-Contributions are welcome! Please follow these steps:
-1. Fork the repository.
-2. Create a new branch (git checkout -b feature-branch).
-3. Make your changes and commit (git commit -m "Add feature").
-4. Push to the branch (git push origin feature-branch).
-5. Open a Pull Request.
+    Output directory
 
-## Issues
-If you encounter any issues or have suggestions, please open an issue on the [GitHub Issues page](https://github.com/Wahid-najim/rexC0n/issues).
+    Target domain(s)
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+📁 Output Structure
 
-## Author
-Wahid Najim
+    All Subdomains: subdomains/all_subdomains.txt
+
+    Live Subdomains: live_subdomains/live_subdomains.txt
+
+    Raw Tool Outputs: Stored within the subdomains/ directory
+
+🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+    Fork the repository
+
+    Create a new branch: git checkout -b feature-branch
+
+    Commit your changes: git commit -m "Add new feature"
+
+    Push to your branch: git push origin feature-branch
+
+    Open a Pull Request
+
+🐞 Issues
+
+Encountered a bug or have suggestions for improvements?
+Please submit an issue via the GitHub Issues page.
+📄 License
+
+This project is licensed under the MIT License.
+See the LICENSE file for full details.
+👨‍💻 Author
+
+Wahid Najim aka 0x1di0t
