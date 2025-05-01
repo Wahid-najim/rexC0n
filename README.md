@@ -1,97 +1,118 @@
-# RexC0n
-Advanced Subdomain Enumeration Tool
 
-RexC0n is a robust Bash script designed for comprehensive subdomain enumeration. It leverages powerful tools such as Subfinder, Assetfinder, Findomain, Amass, and httpx to deliver accurate and structured results. With automated directory management, live subdomain verification, and built-in error handling, this script streamlines reconnaissance workflows for security professionals and bug bounty hunters.
-## 🚀 Features
+![30ade1f4-0a22-4336-aa7b-c61dce53707d](https://github.com/user-attachments/assets/b40dda4a-2712-4844-a888-eebfde8fe18a)
 
-    Seamless integration of leading subdomain enumeration tools
 
-    Consolidation and deduplication of results
+<p align="center"> <img src="A_logo_for_&quot;RexC0n&quot;_features_a_digital_illustratio.png" alt="RexC0n Logo" width="300"/> </p> <h1 align="center"><strong>RexC0n</strong></h1> <h3 align="center">⚔️ Advanced Subdomain Enumeration | Built for Offensive Security</h3> <p align="center"> <img src="https://img.shields.io/badge/status-active-success?style=for-the-badge&logo=gnometerminal&color=0ebeff" /> <img src="https://img.shields.io/badge/bash-powered-121212?style=for-the-badge&logo=gnu-bash&logoColor=white" /> <img src="https://img.shields.io/badge/version-1.0.0-informational?style=for-the-badge&color=blue" /> <img src="https://img.shields.io/badge/license-MIT-critical?style=for-the-badge&logo=opensourceinitiative" /> </p>
+🕶️ About
 
-    Live subdomain detection using httpx
+RexC0n is a high-performance subdomain enumeration script crafted for offensive security professionals. It unifies multiple elite tools—Subfinder, Assetfinder, Findomain, Amass, and httpx—into a single, streamlined Bash workflow. Designed for precision and speed, it’s the go-to recon framework for red teamers, bug bounty hunters, and ethical hackers.
+🔥 Features
 
-    Organized output structure with user-defined directories
+    🧠 Smart aggregation and deduplication of results
 
-    User-friendly prompts and error-handling mechanisms
+    ⚡️ Live subdomain detection using httpx
 
-## 🛠 Requirements
+    🗂️ Auto-organized output with timestamped folders
 
-Ensure the following tools are installed and accessible in your system's PATH:
+    🛡️ Silent error handling and clean CLI experience
 
-    subfinder
+    🧪 Tool health checks before execution
 
-    assetfinder
+    🧵 Modular and easy to expand
 
-    findomain
+🛠 Requirements
 
-    amass
+Ensure the following tools are installed and configured in your $PATH:
+
+    Subfinder
+
+    Assetfinder
+
+    Findomain
+
+    Amass
 
     httpx
 
-## 📦 Installation
+🧬 Installation
 
 # Clone the repository
 git clone https://github.com/Wahid-najim/rexC0n.git
 
-# Navigate into the project directory
+# Change directory
 cd rexC0n
 
-# Verify the required tools are installed
+# Verify tools are installed
 subfinder -h
 assetfinder -h
 findomain -h
 amass -h
 httpx -h
 
-# Make the script executable
- chmod +x subdomain_enum.sh
+# Make script executable
+chmod +x subdomain_enum.sh
 
 ⚙️ Usage
 
-To start the enumeration process:
+Run the script and follow the interactive prompts:
 
 ./subdomain_enum.sh
 
-To display help options:
+For help:
 
 ./subdomain_enum.sh -h
 
-The script will prompt for:
-
-    Output directory
-
-    Target domain(s)
-
 📁 Output Structure
 
-    All Subdomains: subdomains/all_subdomains.txt
+rexC0n/
+├── subdomains/
+│   ├── all_subdomains.txt
+│   ├── toolname_output.txt
+├── live_subdomains/
+│   └── live_subdomains.txt
 
-    Live Subdomains: live_subdomains/live_subdomains.txt
+All output is timestamped and categorized for easy reference and reporting.
+🤖 Example Workflow
 
-    Raw Tool Outputs: Stored within the subdomains/ directory
+Target: example.com
+➡️ Fetching from 5+ tools...
+➡️ Deduplicating results...
+✅ Found: 2,000 subdomains
+📡 Probing for live hosts...
+🔥 Live domains: 200
+
+🧠 Pro Tips
+
+    Add massdns, dnsx, or chaos for deeper integration.
+
+    Combine with waybackurls for hidden endpoints.
+
+    Pipe live domains into nuclei or dirsearch for immediate attack surface mapping.
 
 🤝 Contributing
 
-Contributions are welcome! To contribute:
+You’re welcome to contribute:
 
-    Fork the repository
+# Fork and clone
+git clone https://github.com/YOUR-USERNAME/rexC0n.git
 
-    Create a new branch: git checkout -b feature-branch
+# Create new branch
+git checkout -b feature-x
 
-    Commit your changes: git commit -m "Add new feature"
+# Commit and push
+git commit -m "Add epic feature"
+git push origin feature-x
 
-    Push to your branch: git push origin feature-branch
-
-    Open a Pull Request
+# Open Pull Request
 
 🐞 Issues
 
-Encountered a bug or have suggestions for improvements?
-Please submit an issue via the GitHub Issues page.
-📄 License
+Got an idea? Found a bug? Open an issue or start a discussion.
+📜 License
 
 This project is licensed under the MIT License.
-See the LICENSE file for full details.
-👨‍💻 Author
+See the LICENSE file for details.
+🧑‍💻 Author
 
-Wahid Najim aka 0x1di0t
+Wahid Najim
+Cybersecurity Researcher & Offensive Toolsmith
