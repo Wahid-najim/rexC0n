@@ -154,6 +154,7 @@ You are free to modify, distribute, and use it with proper credit.
 **Wahid Najim (0x1di0t)**  
 Security Researcher | Founder of VirtuoINK
 [GitHub](https://github.com/Wahid-najim)
+[twitter](https://x.com/wahid61106)
 
 ---
 
