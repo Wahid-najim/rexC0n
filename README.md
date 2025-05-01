@@ -1,67 +1,70 @@
-<p align="center"> <img src="https://github.com/user-attachments/assets/b40dda4a-2712-4844-a888-eebfde8fe18a/30ade1f4-0a22-4336-aa7b-c61dce53707d" alt="RexC0n Banner" width="100%" /> </p> <p align="center"> <img src="A_logo_for_&quot;RexC0n&quot;_features_a_digital_illustratio.png" alt="RexC0n Logo" width="260" /> </p> <h1 align="center"><strong>RexC0n</strong></h1> <h3 align="center">⚔️ Precision Reconnaissance Script for Subdomain Enumeration | Built for Red Teams</h3> <p align="center"> <img src="https://img.shields.io/badge/status-actively%20maintained-success?style=for-the-badge&logo=hackthebox&color=0ebeff" /> <img src="https://img.shields.io/badge/bash-weaponized-black?style=for-the-badge&logo=gnubash&logoColor=white" /> <img src="https://img.shields.io/badge/version-1.0.0-blue?style=for-the-badge" /> <img src="https://img.shields.io/badge/license-MIT-red?style=for-the-badge&logo=opensourceinitiative" /> </p>
-🕶️ Overview
+# RexC0n
 
-RexC0n is a weapon-grade Bash utility designed for elite subdomain enumeration. Combining the firepower of Subfinder, Assetfinder, Findomain, Amass, and httpx, this tool offers an automated, modular, and highly effective recon pipeline. Crafted for red teamers, bug bounty hunters, and offensive security professionals.
+### Advanced Subdomain Enumeration Framework for Red Teams, Recon Operators & Bug Bounty Hunters
 
-    🔍 "RexC0n turns raw reconnaissance into actionable intelligence." — Anonymous Operator
+<p align="center">
+  <img src="A_logo_for_&quot;RexC0n&quot;_features_a_digital_illustratio.png" alt="RexC0n Logo" width="200" />
+</p>
 
-🔥 Features
+---
 
-    🧠 Intelligent aggregation with result deduplication
+## 🧭 Overview
 
-    ⚡ Rapid live host detection via httpx
+**RexC0n** is a streamlined Bash-based reconnaissance utility engineered for efficient subdomain enumeration. By combining the output of industry-grade tools and filtering the noise, it delivers actionable results in seconds.
 
-    📁 Timestamped directory structure for clean reporting
+Whether you're mapping an attack surface, prepping for an engagement, or collecting recon during bug bounty hunts, RexC0n acts as your first strike.
 
-    🧪 Pre-execution tool validation
+---
 
-    🛡️ Clean UX with error handling & input prompts
+## ⚙️ Features
 
-    🔌 Modular for plug-and-play integration
+- ✅ Aggregates data from multiple proven sources
+- 🔁 Removes duplicate entries with precision
+- 🌐 Detects live assets using `httpx`
+- 📁 Timestamped output in structured directories
+- 🧪 Pre-checks dependencies before execution
+- 🧩 Modular for easy tool integration
+- 🧼 Clean CLI prompts with minimal friction
 
-🛠️ Dependencies
+---
 
-Ensure the following reconnaissance tools are pre-installed and accessible via $PATH:
+## 🛠 Dependencies
 
-    Subfinder
+Ensure the following tools are installed and accessible via your terminal:
 
-    Assetfinder
+- [Subfinder](https://github.com/projectdiscovery/subfinder)
+- [Assetfinder](https://github.com/tomnomnom/assetfinder)
+- [Findomain](https://github.com/findomain/findomain)
+- [Amass](https://github.com/owasp-amass/amass)
+- [httpx](https://github.com/projectdiscovery/httpx)
 
-    Findomain
+> ⚠️ These tools must be present in your `$PATH`. You can verify each with the `-h` flag (e.g., `subfinder -h`).
 
-    Amass
+---
 
-    httpx
+## 🚀 Installation
 
-🧬 Installation
-
+```bash
 # Clone the repository
 git clone https://github.com/Wahid-najim/rexC0n.git
 
-# Enter directory
+# Navigate into the project folder
 cd rexC0n
-
-# Check tool availability
-subfinder -h
-assetfinder -h
-findomain -h
-amass -h
-httpx -h
 
 # Make the script executable
 chmod +x subdomain_enum.sh
 
-⚙️ Usage
+🧪 Usage
 
-Run interactively with prompts:
-
+# Basic interactive execution
 ./subdomain_enum.sh
 
-Display help menu:
-
+# Help menu
 ./subdomain_enum.sh -h
 
-📂 Output Directory Structure
+📂 Output Structure
+
+All findings are saved under a timestamped directory with this structure:
 
 rexC0n/
 ├── subdomains/
@@ -72,52 +75,58 @@ rexC0n/
 ├── live_subdomains/
 │   └── live_subdomains.txt
 
-All data is timestamped and organized for easy analysis or integration with other tools.
-🧠 Pro Workflow Example
+    Results are cleanly organized for quick reporting and tool chaining.
 
-🎯 Target: example.com
-🔎 Fetching from 5+ intel sources...
-🧹 Cleaning & deduplicating...
-✅ Total Unique: 2,000
-📡 Probing with httpx...
-🔥 Live Domains: 200+
+🧵 Sample Recon Flow
 
-💡 Pro Tips
+Target: example.com
 
-    Add tools like massdns, dnsx, or chaos for advanced DNS resolution.
+> Running Subfinder, Assetfinder, Findomain, Amass...
+> Aggregating results...
+> Deduplicated: 2,315 unique subdomains
+> Probing with httpx...
+> Live assets identified: 248
 
-    Pipe live domains into nuclei for vulnerability fingerprinting.
+From here, the output can be passed directly into:
 
-    Use with waybackurls or gau for endpoint mining.
+    nuclei for vulnerability templates
 
-    Pair with ffuf or dirsearch for immediate attack surface mapping.
+    dirsearch or ffuf for directory fuzzing
 
-🤝 Contributing
+    waybackurls for archived endpoint discovery
 
-We welcome contributions from the infosec community:
+💡 Tips for Elite Recon
 
-# Fork the repo
+    Integrate dnsx, massdns, or Chaos for deeper discovery
+
+    Use with tmux for parallel recon
+
+    Automate post-processing with custom scripts
+
+🤝 Contributions
+
+Pull requests are welcome. To contribute:
+
+# Fork and clone your copy
 git clone https://github.com/YOUR-USERNAME/rexC0n.git
 
-# Create feature branch
-git checkout -b new-feature
+# Create a feature branch
+git checkout -b feature/tool-enhancement
 
-# Commit and push changes
-git commit -m "Add new module"
-git push origin new-feature
+# Commit and push
+git commit -m "Add: integrated dnsx support"
+git push origin feature/tool-enhancement
 
-# Open Pull Request
+Then open a Pull Request on GitHub.
+🐞 Issues
 
-🐞 Reporting Issues
-
-Found a bug or want to suggest an enhancement?
-Open an issue on the GitHub Issues page.
+Have suggestions, bugs, or tool requests? Open an issue:
+➡ RexC0n Issues
 📜 License
 
-This project is released under the MIT License.
-Free for personal and professional use.
+RexC0n is released under the MIT License.
+You are free to modify, distribute, and use it with proper credit.
 👤 Author
 
 Wahid Najim
-Cybersecurity Researcher | Red Team Developer | Founder of VirtuoInk
-GitHub
+Cybersecurity Researcher | Offensive Security Developer
