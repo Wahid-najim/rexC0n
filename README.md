@@ -1,11 +1,10 @@
 
 # RexC0n
+![30ade1f4-0a22-4336-aa7b-c61dce53707d](https://github.com/user-attachments/assets/daa4a163-0822-4468-a83f-a50d8ac218b2)
 
 ### Advanced Subdomain Enumeration Framework for Red Teams, Recon Operators & Bug Bounty Hunters
 
-<p align="center">
-  <img src="A_logo_for_&quot;RexC0n&quot;_features_a_digital_illustratio.png" alt="RexC0n Logo" width="200" />
-</p>
+
 
 ---
 
@@ -152,8 +151,8 @@ You are free to modify, distribute, and use it with proper credit.
 
 ## 👤 Author
 
-**Wahid Najim**  
-Cybersecurity Researcher | Offensive Security Developer  
+**Wahid Najim (0x1di0t)**  
+Security Researcher | Founder of VirtuoINK
 [GitHub](https://github.com/Wahid-najim)
 
 ---
