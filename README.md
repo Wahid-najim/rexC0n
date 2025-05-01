@@ -1,28 +1,27 @@
+<p align="center"> <img src="https://github.com/user-attachments/assets/b40dda4a-2712-4844-a888-eebfde8fe18a/30ade1f4-0a22-4336-aa7b-c61dce53707d" alt="RexC0n Banner" width="100%" /> </p> <p align="center"> <img src="A_logo_for_&quot;RexC0n&quot;_features_a_digital_illustratio.png" alt="RexC0n Logo" width="260" /> </p> <h1 align="center"><strong>RexC0n</strong></h1> <h3 align="center">⚔️ Precision Reconnaissance Script for Subdomain Enumeration | Built for Red Teams</h3> <p align="center"> <img src="https://img.shields.io/badge/status-actively%20maintained-success?style=for-the-badge&logo=hackthebox&color=0ebeff" /> <img src="https://img.shields.io/badge/bash-weaponized-black?style=for-the-badge&logo=gnubash&logoColor=white" /> <img src="https://img.shields.io/badge/version-1.0.0-blue?style=for-the-badge" /> <img src="https://img.shields.io/badge/license-MIT-red?style=for-the-badge&logo=opensourceinitiative" /> </p>
+🕶️ Overview
 
-![30ade1f4-0a22-4336-aa7b-c61dce53707d](https://github.com/user-attachments/assets/b40dda4a-2712-4844-a888-eebfde8fe18a)
+RexC0n is a weapon-grade Bash utility designed for elite subdomain enumeration. Combining the firepower of Subfinder, Assetfinder, Findomain, Amass, and httpx, this tool offers an automated, modular, and highly effective recon pipeline. Crafted for red teamers, bug bounty hunters, and offensive security professionals.
 
+    🔍 "RexC0n turns raw reconnaissance into actionable intelligence." — Anonymous Operator
 
-<p align="center"> <img src="A_logo_for_&quot;RexC0n&quot;_features_a_digital_illustratio.png" alt="RexC0n Logo" width="300"/> </p> <h1 align="center"><strong>RexC0n</strong></h1> <h3 align="center">⚔️ Advanced Subdomain Enumeration | Built for Offensive Security</h3> <p align="center"> <img src="https://img.shields.io/badge/status-active-success?style=for-the-badge&logo=gnometerminal&color=0ebeff" /> <img src="https://img.shields.io/badge/bash-powered-121212?style=for-the-badge&logo=gnu-bash&logoColor=white" /> <img src="https://img.shields.io/badge/version-1.0.0-informational?style=for-the-badge&color=blue" /> <img src="https://img.shields.io/badge/license-MIT-critical?style=for-the-badge&logo=opensourceinitiative" /> </p>
-🕶️ About
-
-RexC0n is a high-performance subdomain enumeration script crafted for offensive security professionals. It unifies multiple elite tools—Subfinder, Assetfinder, Findomain, Amass, and httpx—into a single, streamlined Bash workflow. Designed for precision and speed, it’s the go-to recon framework for red teamers, bug bounty hunters, and ethical hackers.
 🔥 Features
 
-    🧠 Smart aggregation and deduplication of results
+    🧠 Intelligent aggregation with result deduplication
 
-    ⚡️ Live subdomain detection using httpx
+    ⚡ Rapid live host detection via httpx
 
-    🗂️ Auto-organized output with timestamped folders
+    📁 Timestamped directory structure for clean reporting
 
-    🛡️ Silent error handling and clean CLI experience
+    🧪 Pre-execution tool validation
 
-    🧪 Tool health checks before execution
+    🛡️ Clean UX with error handling & input prompts
 
-    🧵 Modular and easy to expand
+    🔌 Modular for plug-and-play integration
 
-🛠 Requirements
+🛠️ Dependencies
 
-Ensure the following tools are installed and configured in your $PATH:
+Ensure the following reconnaissance tools are pre-installed and accessible via $PATH:
 
     Subfinder
 
@@ -39,80 +38,86 @@ Ensure the following tools are installed and configured in your $PATH:
 # Clone the repository
 git clone https://github.com/Wahid-najim/rexC0n.git
 
-# Change directory
+# Enter directory
 cd rexC0n
 
-# Verify tools are installed
+# Check tool availability
 subfinder -h
 assetfinder -h
 findomain -h
 amass -h
 httpx -h
 
-# Make script executable
+# Make the script executable
 chmod +x subdomain_enum.sh
 
 ⚙️ Usage
 
-Run the script and follow the interactive prompts:
+Run interactively with prompts:
 
 ./subdomain_enum.sh
 
-For help:
+Display help menu:
 
 ./subdomain_enum.sh -h
 
-📁 Output Structure
+📂 Output Directory Structure
 
 rexC0n/
 ├── subdomains/
 │   ├── all_subdomains.txt
-│   ├── toolname_output.txt
+│   ├── subfinder.txt
+│   ├── assetfinder.txt
+│   └── ...
 ├── live_subdomains/
 │   └── live_subdomains.txt
 
-All output is timestamped and categorized for easy reference and reporting.
-🤖 Example Workflow
+All data is timestamped and organized for easy analysis or integration with other tools.
+🧠 Pro Workflow Example
 
-Target: example.com
-➡️ Fetching from 5+ tools...
-➡️ Deduplicating results...
-✅ Found: 2,000 subdomains
-📡 Probing for live hosts...
-🔥 Live domains: 200
+🎯 Target: example.com
+🔎 Fetching from 5+ intel sources...
+🧹 Cleaning & deduplicating...
+✅ Total Unique: 2,000
+📡 Probing with httpx...
+🔥 Live Domains: 200+
 
-🧠 Pro Tips
+💡 Pro Tips
 
-    Add massdns, dnsx, or chaos for deeper integration.
+    Add tools like massdns, dnsx, or chaos for advanced DNS resolution.
 
-    Combine with waybackurls for hidden endpoints.
+    Pipe live domains into nuclei for vulnerability fingerprinting.
 
-    Pipe live domains into nuclei or dirsearch for immediate attack surface mapping.
+    Use with waybackurls or gau for endpoint mining.
+
+    Pair with ffuf or dirsearch for immediate attack surface mapping.
 
 🤝 Contributing
 
-You’re welcome to contribute:
+We welcome contributions from the infosec community:
 
-# Fork and clone
+# Fork the repo
 git clone https://github.com/YOUR-USERNAME/rexC0n.git
 
-# Create new branch
-git checkout -b feature-x
+# Create feature branch
+git checkout -b new-feature
 
-# Commit and push
-git commit -m "Add epic feature"
-git push origin feature-x
+# Commit and push changes
+git commit -m "Add new module"
+git push origin new-feature
 
 # Open Pull Request
 
-🐞 Issues
+🐞 Reporting Issues
 
-Got an idea? Found a bug? Open an issue or start a discussion.
+Found a bug or want to suggest an enhancement?
+Open an issue on the GitHub Issues page.
 📜 License
 
-This project is licensed under the MIT License.
-See the LICENSE file for details.
-🧑‍💻 Author
+This project is released under the MIT License.
+Free for personal and professional use.
+👤 Author
 
 Wahid Najim
-Cybersecurity Researcher & Offensive Toolsmith
+Cybersecurity Researcher | Red Team Developer | Founder of VirtuoInk
+GitHub
