@@ -22,6 +22,7 @@ check_command() {
     fi
 }
 
+
 # Function to display usage
 usage() {
     echo -e "${YELLOW}Usage: $0${NC}"
